@@ -3,17 +3,16 @@
 A robust, atomic, and secure backend API for managing products and transactions. Built for speed, consistency, and scalability using Node.js, Express, and MongoDB.
 
 ## Features
-## Features
 
 * **Secure Authentication:** JWT-based auth with Role-Based Access Control (Customer vs Staff vs Admin)
-* **Atomic Transactions:** MongoDB Sessions ensure no partial transactions,helping in data consistency
+* **Atomic Transactions:** MongoDB Sessions ensure no partial transactions,helping maintain data consistency
 * **Advanced Product Search:** Filtering, sorting, and regex search
 * **Order Snapshotting:** Captures customer info and product price at purchase for accurate records
 
 
 ## Tech Stack
 
-* **Backend:** Node.js, Express.js
+* **Backend:** Node.js + Express.js
 * **Database:** MongoDB (utilizing Replica Sets for transactions)
 * **ORM:** Mongoose
 * **Security:** JSON Web Tokens (JWT), bcryptjs
@@ -59,12 +58,7 @@ A robust, atomic, and secure backend API for managing products and transactions.
 ### Orders
 * `POST /orders/quickbuy` - Atomic single-item purchase
 * `POST /orders/checkout` - Atomic multi-item checkout
-
----
-
-## (Atomic Transactions)
-
-To ensure no inventory bugs occur, the `checkout` endpoint uses MongoDB transactions. If any item in the cart is out of stock, the entire transaction rolls back, ensuring stock is never inaccurately deducted.
+*Uses MongoDB transactions: if any item is out of stock, the entire transaction rolls back, keeping inventory accurate.*
 
 
 
