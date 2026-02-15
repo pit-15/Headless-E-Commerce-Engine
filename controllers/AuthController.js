@@ -87,7 +87,7 @@ export const login = asyncHandler(async(req,res)=>
             role:user.role
         }
 
-        const token = jwt.sign(payload,process.env.JWT_SECRET,{expiresIn:'1d'})
+        const token = jwt.sign(payload,process.env.JWT_SECRET,{expiresIn:process.env.JWT_EXPIRE})
         
         res.status(201).json({message:"Login Successfull",token});
     } 
