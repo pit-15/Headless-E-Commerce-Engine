@@ -28,7 +28,7 @@ A robust, atomic, and secure backend API for managing products and transactions.
 ### Installation
 1.  **Clone the repository:**
     ```bash
-    git clone [https://github.com/](https://github.com/)[YOUR-USERNAME]/[YOUR-REPO-NAME].git
+    git clone https://github.com/pit-15/Headless-E-Commerce-Engine.git
     ```
 2.  **Configure environment variables:**
     Create a `.env` file in the root directory and add:
