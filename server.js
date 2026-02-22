@@ -14,9 +14,13 @@ app.use(express.json());
 
 
 //routes
-app.use("/auth",authroutes);
-app.use("/products", productroutes);
-app.use("/order",orderRoutes)
+app.get("/",(req,res)=>
+{
+    res.send("Headless E-Commerce API is running Successfully")
+});
+app.use("/api/auth",authroutes);
+app.use("/api/products", productroutes);
+app.use("/api/order",orderRoutes)
 app.use(errorHandler)
 
 const PORT=process.env.PORT || 7071
